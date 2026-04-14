@@ -33,13 +33,12 @@ def update_timestamp():
         pattern = r'# 最后更新：\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} \(自动生成\)'
         replacement = f'# 最后更新：{current_time} (自动生成)'
 
-        # 执行替换
-        new_content = re.sub(pattern, replacement, content)
-
-        # 检查是否找到并替换了时间戳
-        if new_content == content:
+        if not re.search(pattern, content):
             print("警告: 未找到时间戳行，可能配置文件格式有误")
             return False
+
+        # 执行替换
+        new_content = re.sub(pattern, replacement, content)
 
         # 写回文件
         with open(config_file, 'w', encoding='utf-8') as f:
@@ -77,11 +76,11 @@ def update_timestamp_simplified():
         pattern = r'# 最后更新：\d{4}-\d{2}-\d{2} \(简化版本\)'
         replacement = f'# 最后更新：{current_date} (简化版本)'
 
-        new_content = re.sub(pattern, replacement, content)
-
-        if new_content == content:
+        if not re.search(pattern, content):
             print("警告: 简化版配置文件未找到时间戳行")
             return False
+
+        new_content = re.sub(pattern, replacement, content)
 
         with open(config_file, 'w', encoding='utf-8') as f:
             f.write(new_content)
