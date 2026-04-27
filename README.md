@@ -77,6 +77,29 @@ Shadowrocket 使用方法可以查看： https://houjoe.me/posts/shadowrocket-gu
 2. 添加新版本的配置链接
 3. 重新下载并应用配置
 
+## 🗂️ 策略组说明
+
+| 策略组 | 默认节点 | 说明 |
+|--------|----------|------|
+| AI 服务 | 美国节点 | OpenAI、Claude、Gemini 等 AI 工具 |
+| Notion 服务 | 香港节点 | Notion 全系域名，独立分组方便单独切换 |
+| Typeless | 日本节点 | Typeless 写作工具，独立分组 |
+| 海外流媒体 | 自选 | Netflix、Disney+、HBO 等 |
+| YouTube | 香港节点 | YouTube 及视频 CDN |
+| TikTok | 自选 | TikTok 海外版 |
+| Spotify | 直连 | Spotify 音乐 |
+| Telegram | 自选 | Telegram 即时通讯 |
+| 海外社交媒体 | 美国节点 | Twitter/X、Reddit、Facebook、Instagram 等 |
+| 游戏平台 | 香港节点 | Steam、Epic、PlayStation、Xbox 等商店 |
+| 游戏下载 | 直连 | 游戏内容下载走直连，速度更快 |
+
+## 🛡️ 节点过滤
+
+地区分组（香港 / 台湾 / 日本 / 新加坡 / 韩国 / 美国）均已配置以下过滤规则：
+
+- **自动排除假节点**：过滤机场常见的「套餐到期、到期时间、剩余流量、expire、官网、官方、重置」等非实际节点条目
+- **繁简体双覆盖**：支持繁体与简体节点名称（如臺灣 / 台湾、東京 / 东京、獅城 / 狮城等），避免漏匹配
+
 ---
 
 **简单来说，只需要复制链接，粘贴到 Shadowrocket 里面就可以使用了！记得开启自动更新，省心又方便！**
